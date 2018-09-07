@@ -10,6 +10,7 @@ import com.amazonaws.services.lexruntime.model.PostContentResult;
 
 import tina_bot_support.AmazonLexRunTimeFactory;
 import tina_bot_support.CredentialFactory;
+import tina_bot_support.JavaSoundRecorder;
 import tina_bot_support.TinaSpeak;
 
 public class ApplicationFiledAudioText {
