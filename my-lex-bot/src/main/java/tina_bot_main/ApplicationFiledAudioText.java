@@ -8,6 +8,9 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import com.amazonaws.services.lexruntime.model.PostContentRequest;
 import com.amazonaws.services.lexruntime.model.PostContentResult;
 
+import javazoom.jl.player.advanced.AdvancedPlayer;
+import javazoom.jl.player.advanced.PlaybackEvent;
+import javazoom.jl.player.advanced.PlaybackListener;
 import tina_bot_support.AmazonLexRunTimeFactory;
 import tina_bot_support.CredentialFactory;
 import tina_bot_support.JavaSoundRecorder;
@@ -24,7 +27,7 @@ public class ApplicationFiledAudioText {
                         .withInputText("How are you") //welcome intent
 						.withBotAlias(credentials.getBotAliase())
 						.withBotName(credentials.getBotName())
-						.withUserId(credentials.getUserName())                      
+						.withUserId(credentials.getUserName())                     
         );
 		
 		System.out.println("Text - "+result.getMessage());*/
@@ -32,11 +35,11 @@ public class ApplicationFiledAudioText {
 	//************************************ Audio input and Audio output *****************************************
 		
 		//*********************** Sound Recording
-			JavaSoundRecorder.recordVoice();  //say Hi or how are you
-			FileInputStream as = new FileInputStream(new File("./src/main/resources/speeches/RecordAudio.wav"));
+			//JavaSoundRecorder.recordVoice();  //say Hi or how are you
+			//FileInputStream as = new FileInputStream(new File("./src/main/resources/speeches/RecordAudio.wav"));
 		
 		//*********************** Recorded files
-			// FileInputStream as = new FileInputStream(new File("./src/main/resources/speeches/hello.wav"));
+			FileInputStream as = new FileInputStream(new File("./src/main/resources/speeches/hello.wav"));
 			//FileInputStream as = new FileInputStream(new File("./src/main/resources/speeches/howAreYou.wav"));
 		
 		//Post audio to amazon lex
@@ -51,6 +54,7 @@ public class ApplicationFiledAudioText {
 				);
 		//Print response message
 		System.out.println("Audio - " + res.getMessage());
+
 		//Play response message		
 		TinaSpeak.tinaSpeak(res.getMessage()); 
 	
