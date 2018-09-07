@@ -8,12 +8,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import com.amazonaws.services.lexruntime.model.PostContentRequest;
 import com.amazonaws.services.lexruntime.model.PostContentResult;
 
-import javazoom.jl.player.advanced.AdvancedPlayer;
-import javazoom.jl.player.advanced.PlaybackEvent;
-import javazoom.jl.player.advanced.PlaybackListener;
 import tina_bot_support.AmazonLexRunTimeFactory;
 import tina_bot_support.CredentialFactory;
-import tina_bot_support.JavaSoundRecorder;
 import tina_bot_support.TinaSpeak;
 
 public class ApplicationFiledAudioText {
