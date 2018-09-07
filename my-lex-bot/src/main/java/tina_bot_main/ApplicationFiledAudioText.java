@@ -22,9 +22,9 @@ public class ApplicationFiledAudioText {
 		/*PostTextResult result = AmazonLexRunTimeFactory.create(new ApplicationConfiguration()).postText(
                 new PostTextRequest()
                         .withInputText("How are you") //welcome intent
-                        .withBotAlias("Tina")
-                        .withBotName("Tina")
-                        .withUserId("zodgevaibhav")                       
+						.withBotAlias(credentials.getBotAliase())
+						.withBotName(credentials.getBotName())
+						.withUserId(credentials.getUserName())                      
         );
 		
 		System.out.println("Text - "+result.getMessage());*/
